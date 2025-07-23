@@ -1,0 +1,46 @@
+name: PoC PR Checks
+
+on:
+  pull_request:
+    branches:
+      - main  # Runs this workflow only when PR targets 'main'
+
+jobs:
+  lint:
+    name: Lint Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Simulate Lint
+        run: |
+          echo "Running Linter..."
+          sleep 2
+          echo "✅ No lint issues found"
+
+  test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Simulate Unit Tests
+        run: |
+          echo "Running Unit Tests..."
+          sleep 2
+          echo "✅ All tests passed"
+
+  format:
+    name: Format Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Simulate Format Check
+        run: |
+          echo "Checking Code Format..."
+          sleep 2
+          echo "✅ Formatting is good"
