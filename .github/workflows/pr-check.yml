@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Simulate Lint
+      - name: Simulate Lint (Require)
         run: |
           echo "Running Linter..."
           sleep 2
@@ -26,7 +26,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Simulate Unit Tests
+      - name: Simulate Unit Tests (not require)
         run: |
           echo "Running Unit Tests..."
           sleep 2
@@ -40,7 +40,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Simulate Format Check
+      - name: Simulate Format Check (require)
         run: |
           echo "Checking Code Format..."
           sleep 2
