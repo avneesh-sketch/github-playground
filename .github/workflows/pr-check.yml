@@ -30,7 +30,8 @@ jobs:
         run: |
           echo "Running Unit Tests..."
           sleep 2
-          echo "✅ All tests passed"
+          echo "❌ Tests failed!"
+          exit 1
 
   format:
     name: Format Check
